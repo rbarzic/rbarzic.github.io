@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Using modal source code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog v2.0"/>
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+      </div>
+      <a class="navbar-brand" href="../../../index.html">RB's blog</a>
+      <div class="collapse navbar-collapse">
+	<ul class="org-ul">
+<li><a href="../../../features.html"><i class="icon-cog icon-white"></i> Features</a>
+</li>
+
+<li><a href="#"><i class="icon-book icon-white"></i> Documentation</a>
+<ul class="org-ul">
+<li><a href="../../../templates.html">Templates</a>
+</li>
+<li><a href="../../../structures.html">Structures</a>
+</li>
+<li><a href="../../../functions.html">Functions</a>
+</li>
+<li></li>
+<li><a href="../../../faq.html">FAQ</a>
+</li>
+<li></li>
+<li><a href="../../../bug-report.html">Bug report</a>
+</li>
+</ul>
+</li>
+
+<li><a href="#"><i class="icon-file icon-white"></i> Tips</a>
+<ul class="org-ul">
+<li><a href="../../../tips/2012/08/21_adding-an-image-into-a-post.html">Adding an image into a post</a>
+</li>
+<li><a href="../../../tips/2012/05/21_create-static-pages.html">Create static pages</a>
+</li>
+<li><a href="../../../tips/2012/05/07_add-a-custom-font.html">Add a custom font</a>
+</li>
+<li><a href="../../../tips/2012/05/03_some-bootstrap-features.html">Some Bootstrap features</a>
+</li>
+<li><a href="../../../tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
+</li>
+</ul>
+</li>
+
+<li><a href="../../../tags.html"><i class="icon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../archives.html"><i class="icon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../index.xml"><i class="icon-rss icon-white"></i> RSS</a>
+</li>
+
+<li><a href="../../../changelog.html"><i class="icon-pencil icon-white"></i> Changelog</a>
+</li>
+
+<li><a href="../../../roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../debug.html">(debug)</a>
+</li>
+</ul>
+
+      </div>
+    </nav>
+
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="../../../index.html">Home</a> <span class="divider"></span></li>
+  <li><a href="../../../tips/index.html">Tips</a> <span class="divider"></span></li><li><a href="../../../tips/2012/index.html">2012</a> <span class="divider"></span></li><li><a href="../../../tips/2012/02/index.html">02</a> <span class="divider"></span></li><li>Using modal source code</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+  <div class="article">
+  <header class="article-header">
+
+    
+    
+    <div class="jumbotron">
+      <div class="page-header">
+	<time date="2012-02-09T23:13:00Z">
+	  <div>
+	    <span class="day">02</span>
+	    <span class="month"><a href="../../../tips/2012/02/index.html">feb.</a>
+	    </span>
+	    <span class="year"><a href="../../../tips/2012/index.html">2012</a></span>
+	  </div>
+	  <h1>Using modal source code</h1>
+	</time>
+      </div>
+      <nav>
+	<ul class="pager">
+	  <li class="previous"><a href="../../../tips/2012/01/15_alerts.html"><i class="fa fa-chevron-circle-left"></i>&nbsp;Alerts</a></li><li class="next" style="text-align: right;"><a href="../../../tips/2012/02/10_adding-icons.html">Adding icons&nbsp;<i class="fa fa-chevron-circle-right"></i></a></li>
+	</ul>
+      </nav>
+    </div>
+
+  </header>
+  <div class="article-content">
+    <p>
+The <a href="http://twitter.github.com/bootstrap/javascript.html#modals">Modal</a> bootstrap script can be used to display the content of an external
+file in a modal window. The magic line is:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span style="color: #7F9F7F;">#+O_BLOG_SOURCE: path/to/file [mode]</span>
+</pre>
+</div>
+
+<p>
+The <i>org template shorcut</i> is <code>&lt;os</code> <code>TAB</code>. Two parameters might be used:
+</p>
+<ul class="org-ul">
+<li>The mandatory <code>/path/to/file</code> which is the path to the file from which
+content should be read.
+</li>
+<li>The optional <code>mode</code> parameter, which can be determined if omitted.
+</li>
+</ul>
+
+<p>
+Here is an example of the <code>sample-init.el</code> file:
+</p>
+
+<div class="o-blog-source"><a class="btn btn-info" data-toggle="modal" data-target="#sample-initel" ><i class="icon-file icon-white"></i>&nbsp;sample-init.el</a></div><div class="modal fade hide" id="sample-initel"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>sample-init.el</h3></div><div class="modal-body"><pre>
+<span style="color: #5F7F5F;">;;; </span><span style="color: #7F9F7F;">sample-init.el --- sample init file to be used to debug o-blog
+</span>
+<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Copyright &#169; 2012 S&#233;bastien Gross &lt;seb&#8226;&#593;&#428;&#8226;chezwam&#8226;&#598;&#629;&#648;&#8226;org&gt;
+</span>
+<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Author: S&#233;bastien Gross &lt;seb&#8226;&#593;&#428;&#8226;chezwam&#8226;&#598;&#629;&#648;&#8226;org&gt;
+</span><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Keywords: emacs,</span><span style="color: #ffff00; background-color: #CC9393; font-weight: bold;"> </span><span style="color: #7F9F7F;">
+</span><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Created: 2012-03-20
+</span><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Last changed: 2012-03-26 16:36:31
+</span><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
+</span>
+<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">This file is NOT part of GNU Emacs.
+</span>
+<span style="color: #5F7F5F;">;;; </span><span style="color: #7F9F7F;">Commentary:
+</span><span style="color: #5F7F5F;">;;</span><span style="color: #ffff00; background-color: #CC9393; font-weight: bold;"> </span><span style="color: #7F9F7F;">
+</span>
+
+<span style="color: #5F7F5F;">;;; </span><span style="color: #7F9F7F;">Code:
+</span>
+
+<span style="color: #DCDCCC;">(</span><span style="color: #F0DFAF; font-weight: bold;">defun</span> <span style="color: #93E0E3;">ob-build-sample</span> <span style="color: #BFEBBF;">()</span>
+  <span style="color: #BFEBBF;">(</span><span style="color: #F0DFAF; font-weight: bold;">let*</span> <span style="color: #D0BF8F;">(</span><span style="color: #93E0E3;">(</span>d default-directory<span style="color: #93E0E3;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span> <span style="color: #93E0E3;">(</span>sample <span style="color: #9FC59F;">(</span>format <span style="color: #CC9393;">"%s/.emacs.d/o-blog/example/sample.org"</span> d<span style="color: #9FC59F;">)</span><span style="color: #93E0E3;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span> <span style="color: #93E0E3;">(</span>debugger
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span>  <span style="color: #9FC59F;">(</span><span style="color: #F0DFAF; font-weight: bold;">lambda</span> <span style="color: #94BFF3;">(</span><span style="color: #7CB8BB;">&amp;rest</span> debugger-args<span style="color: #94BFF3;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span>    <span style="color: #94BFF3;">(</span><span style="color: #F0DFAF; font-weight: bold;">let*</span> <span style="color: #E0CF9F;">(</span><span style="color: #8FB28F;">(</span>trace <span style="color: #6CA0A3;">(</span><span style="color: #F0DFAF; font-weight: bold;">with-temp-buffer</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #DCDCCC;">(</span>insert <span style="color: #BFEBBF;">(</span><span style="color: #F0DFAF; font-weight: bold;">with-output-to-string</span> <span style="color: #D0BF8F;">(</span>backtrace<span style="color: #D0BF8F;">)</span><span style="color: #BFEBBF;">)</span><span style="color: #DCDCCC;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #DCDCCC;">(</span>beginning-of-buffer<span style="color: #DCDCCC;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">error begins on line 16
+</span><span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">line stats with "  signal(error ..."
+</span><span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #DCDCCC;">(</span>goto-line 16<span style="color: #DCDCCC;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #DCDCCC;">(</span>goto-char <span style="color: #BFEBBF;">(</span>point-at-bol<span style="color: #BFEBBF;">)</span><span style="color: #DCDCCC;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Remove null chars
+</span><span style="color: #a9a9a9; background-color: #BC8383;">                        </span>    <span style="color: #DCDCCC;">(</span>replace-regexp-in-string
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>      <span style="color: #BFEBBF;">(</span>char-to-string 0<span style="color: #BFEBBF;">)</span> <span style="color: #CC9393;">"^@"</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">                        </span>      <span style="color: #BFEBBF;">(</span>buffer-substring <span style="color: #D0BF8F;">(</span>point<span style="color: #D0BF8F;">)</span> <span style="color: #D0BF8F;">(</span>point-max<span style="color: #D0BF8F;">)</span><span style="color: #BFEBBF;">)</span><span style="color: #DCDCCC;">)</span><span style="color: #6CA0A3;">)</span><span style="color: #8FB28F;">)</span><span style="color: #E0CF9F;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span>      <span style="color: #E0CF9F;">(</span>o-blog-bug-report trace<span style="color: #E0CF9F;">)</span><span style="color: #94BFF3;">)</span><span style="color: #9FC59F;">)</span><span style="color: #93E0E3;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span> <span style="color: #93E0E3;">(</span>debug-on-error t<span style="color: #93E0E3;">)</span>
+<span style="color: #a9a9a9; background-color: #BC8383;">        </span> print-length print-level<span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>add-to-list 'load-path <span style="color: #93E0E3;">(</span>format <span style="color: #CC9393;">"%s/.emacs.d/org-mode/lisp"</span> d<span style="color: #93E0E3;">)</span><span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>add-to-list 'load-path <span style="color: #93E0E3;">(</span>format <span style="color: #CC9393;">"%s/.emacs.d/org-mode/contrib/lisp"</span> d<span style="color: #93E0E3;">)</span><span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>add-to-list 'load-path <span style="color: #93E0E3;">(</span>format <span style="color: #CC9393;">"%s/.emacs.d/o-blog"</span> d<span style="color: #93E0E3;">)</span><span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span><span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">o-blog</span><span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>print
+      <span style="color: #93E0E3;">(</span>concat
+        <span style="color: #9FC59F;">(</span>emacs-version<span style="color: #9FC59F;">)</span> <span style="color: #CC9393;">"\n"</span>
+        <span style="color: #9FC59F;">(</span>org-version<span style="color: #9FC59F;">)</span> <span style="color: #CC9393;">"\n"</span>
+        <span style="color: #9FC59F;">(</span>o-blog-version<span style="color: #9FC59F;">)</span> <span style="color: #CC9393;">"\n"</span><span style="color: #93E0E3;">)</span><span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>find-file sample<span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>org-publish-blog sample<span style="color: #D0BF8F;">)</span>
+    <span style="color: #D0BF8F;">(</span>kill-emacs<span style="color: #D0BF8F;">)</span><span style="color: #BFEBBF;">)</span><span style="color: #DCDCCC;">)</span>
+</pre></div></div>
+
+  </div>
+  
+  <footer class="well article-footer">
+    Posted on <time datetime="2012-02-09T23:13:00Z"> torsdag februar, 09 2012 at 23:13:00</time>.
+    <nav class="tag-cloud">
+      <h1><i class="icon-tags"></i> related tags</h1>
+      <ul>
+	<li class="label label-default small"><a href="../../../tags/usage.html">usage</a></li><li class="label label-default small"><a href="../../../tags/bootstrap.html">Bootstrap</a></li>
+      </ul>
+    </nav>
+  </footer>
+  </div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = ''; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="col-md-3">
+	      <h1>About</h1>
+	      <!-- about -->
+	      <p>
+This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a href="http://orgmode.org/">Org-mode</a> + <a href="https://github.com/renard/o-blog">o-blog</a>
+</p>
+
+	      <!-- /about -->
+	    </nav>
+	    <nav id="links" class="col-md-3">
+	      <h1>Links</h1>
+	      <!-- Navigation Footer -->
+	      <ul class="org-ul">
+<li><a href="../../../index.html"><i class="icon-home icon-white"></i> Home</a>
+</li>
+
+<li><a href="../../../tips/2012/08/21_adding-an-image-into-a-post.html"><i class="icon-file icon-white"></i> Tips</a>
+</li>
+
+<li><a href="../../../tags.html"><i class="icon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../archives.html"><i class="icon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../index.xml"><i class="icon-rss icon-white"></i> RSS</a>
+</li>
+</ul>
+
+	      <!-- Navigation Footer -->
+	    </nav>
+	    <nav id="archives" class="col-md-3">
+	      <h1><a href="../../../archives.html">Archives</a></h1>
+	      
+	    </nav>
+	    <nav class="tags col-md-3">
+	      <h1><a href="../../../tags/index.html">Tags</a></h1>
+	      <span class="ob-tagcloud" data-source="../../../tags.js" data-path-to-root="../../.."/>
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <!-- copyright -->
+	  <p>
+Copyright © 2008-2012 <a href="mailto:seb%2520%E2%9D%A8%C9%91%C6%A6%C9%B5%CF%90%C9%91%CA%82%C9%9B%E2%9D%A9%2520chezwam%2520%E2%9D%A8%C6%A4%C9%B5%C9%A9%C9%B2%CA%88%E2%9D%A9%2520org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+      <script type="text/javascript">
+      	var path_to_root = "../../..";
+	var ob_this_page = "tips/2012/02/09_using-modal-source-code.html";
+      </script>
+      <script src="../../../style/jquery-2.1.1.min.js"></script>
+      <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+      <script src="../../../style/o-blog-bootstrap.min.js"></script>
+      <script type="text/javascript">
+	$(document).ready(function() {
+        $("head").append([
+	'<link href="../../../style/bootstrap/css/bootstrap.css" rel="stylesheet">',
+	'<link href="../../../style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">',
+	'<link href="../../../style/tipue/css/tipuesearch.css" rel="stylesheet">',
+        '<link href="../../../style/tipue/css/tipuedrop.css" rel="stylesheet">'].join());
+	});
+     </script>
+</body>
+</html>
+
