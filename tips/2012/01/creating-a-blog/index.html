@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Creating a blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog v2.0"/>
+    <link rel="icon" type="image/png" href="../../../../style/img/favicon.png" />
+    <script src="../../../../style/js/sidjs.min.js" async></script>
+    <script>
+      Lisp error in nil: (file-error Opening input file no such file or directory /home/ronan/perso/github/o-blog/templates/style/js/runif.min.js)
+      Lisp error in nil: (file-error Opening input file no such file or directory /home/ronan/perso/github/o-blog/templates/style/js/o-blog-init.min.js)
+    </script>
+  </head>
+  <body>
+    <div id="spinner" style="width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999998;background-color:rgba(0,0,0,0.5);">
+      <div id="ob-spinner" style="width:100px;height:100px;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999999;background-color:rgba(127,127,127,0.5);"></div>
+    </div>
+    <div id="page" class="container">
+
+  <div class="article">
+  <header class="article-header">
+    <div class="page-header">
+      <div>
+	<div class="time">
+	  <time datetime="2012-01-07"></time>
+	  <div>
+	    <span class="day">07</span>
+	    <span class="month"><a href="../../../../tips/2012/01/index.html">jan.</a>
+	    </span>
+	    <span class="year"><a href="../../../../tips/2012/index.html">2012</a></span>
+	  </div>
+	</div>
+	
+	<h1>Creating a blog</h1>
+      </div>
+      <div>
+	<nav>
+	  <ul class="pager">
+	    <li class="previous">&nbsp;</li><li class="next" style="text-align: right;"><a href="../../../../tips/2012/01/how-to-use-tags/index.html">How to use tags&nbsp;<i class="fa fa-chevron-circle-right"></i></a></li>
+	  </ul>
+	</nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>
+In o-blog, a site is contained in a single Org-mode file specifying
+both pages and a blog; in turn, the blog consists of Org-mode entries,
+specifically, <a href="http://orgmode.org/manual/TODO-Items.html#TODO-Items">Org-mode TODO items</a>. Each entry has a headline/title,
+some properties and some text. Exporting a blog means publishing all
+the entries of an Org-mode file (to their own HTML5 files) that are
+<code>TODO</code> items marked <code>DONE</code>.
+</p>
+
+<p>
+A minimal o-blog Org-mode file could look like:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span style="color: #b3b3b3;">#+TITLE:</span> <span style="color: #afeeee; font-weight: bold;">Lorem ipsum</span>
+<span style="color: #7F9F7F;">#+DESCRIPTION: dolor sit amet</span>
+<span style="color: #b3b3b3;">#+DATE:</span>
+
+<span style="color: #7F9F7F;">#+STARTUP: logdone</span>
+
+<span style="color: #7F9F7F;">#+URL: <a href="http://blog.example.com">http://blog.example.com</a></span>
+
+<span style="color: #DFAF8F;">* </span><span style="color: #AFD8AF; font-weight: bold;">DONE</span><span style="color: #DFAF8F;"> Lorem ipsum</span>
+,  <span style="color: #7F9F7F;">CLOSED:</span> <span style="color: #8CD0D3; text-decoration: underline;">[2012-01-07 Sat 00:13]</span>
+,  :PROPERTIES:
+,  :tags:     Lorem
+,  :END:
+
+,  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
+,  tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt
+,  et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et
+,  magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec
+,  vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan
+,  nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+</pre>
+</div>
+
+<p>
+Please note the blank line between the properties section and the text itself.
+</p>
+
+<p>
+Use <code>#+STARTUP: logdone</code> to automatically add a time stamp when closing an
+entry.
+</p>
+
+  </div>
+  
+  <footer class="article-footer">
+    <!-- Posted on <time datetime="2012-01-07T00:13:00Z"> lørdag januar, 07 2012 at 00:13:00</time>. -->
+    <nav class="tag-cloud">
+      <i class="fa fa-tags"></i>
+      <ul>
+	<li class="label label-default small"><a href="../../../../tags/usage.html">usage</a></li><li class="label label-default small"><a href="../../../../tags/o-blog.html">o-blog</a></li>
+      </ul>
+    </nav>
+
+  </footer>
+  <div class="ob-share">
+  <div class="title">If you like this article you may want to share it</div>
+  <div class="social-container">
+    
+    
+    
+  </div>
+</div>
+
+
+  </div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'renard-o-blog';
+  ob_js_to_load.push(disqus_shortname + '.disqus.com/embed.js');
+</script>
+
+        </div>
+    <div class="ob-navbar-container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ob-navbar">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="../../../../index.html">RB's blog</a>
+      </div>
+      <div class="collapse navbar-collapse ob-navbar">
+	<ul class="org-ul">
+<li><a href="../../../../features.html"><i class="glyphicon glyphicon-cog icon-white"></i> Features</a>
+</li>
+
+<li><a href="#"><i class="glyphicon glyphicon-book icon-white"></i> Documentation</a>
+<ul class="org-ul">
+<li><a href="../../../../templates.html">Templates</a>
+</li>
+<li><a href="../../../../structures.html">Structures</a>
+</li>
+<li><a href="../../../../functions.html">Functions</a>
+</li>
+<li></li>
+<li><a href="../../../../faq.html">FAQ</a>
+</li>
+<li></li>
+<li><a href="../../../../bug-report.html">Bug report</a>
+</li>
+</ul>
+</li>
+
+<li><a href="#"><i class="glyphicon glyphicon-file icon-white"></i> Tips</a>
+<ul class="org-ul">
+<li><a href="../../../../tips/2012/08/adding-an-image-into-a-post/index.html">Adding an image into a post</a>
+</li>
+<li><a href="../../../../tips/2012/05/create-static-pages/index.html">Create static pages</a>
+</li>
+<li><a href="../../../../tips/2012/05/add-a-custom-font/index.html">Add a custom font</a>
+</li>
+<li><a href="../../../../tips/2012/05/some-bootstrap-features/index.html">Some Bootstrap features</a>
+</li>
+<li><a href="../../../../tips/2012/02/using-bootstrap-grid/index.html">Using Bootstrap grid</a>
+</li>
+</ul>
+</li>
+
+<li><a href="../../../../tags.html"><i class="glyphicon glyphicon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../../archives.html"><i class="glyphicon glyphicon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../../testimonials.html"><i class="glyphicon glyphicon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../../index.xml"><i class="glyphicon glyphicon-rss icon-white"></i> RSS</a>
+</li>
+
+<li><a href="../../../../changelog.html"><i class="glyphicon glyphicon-pencil icon-white"></i> Changelog</a>
+</li>
+
+<li><a href="../../../../roadmap.html"><i class="glyphicon glyphicon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../../debug.html">(debug)</a>
+</li>
+</ul>
+
+      </div>
+    </nav>
+
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="../../../../index.html">Home</a> <span class="divider"></span></li>
+  <li><a href="../../../../tips/index.html">Tips</a> <span class="divider"></span></li><li><a href="../../../../tips/2012/index.html">2012</a> <span class="divider"></span></li><li><a href="../../../../tips/2012/01/index.html">01</a> <span class="divider"></span></li><li>Creating a blog</li>
+  </ul>
+
+      </div>
+    </div>
+    </div>
+
+<div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>About</h2>
+	      <!-- about -->
+	      <p>
+This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a href="http://orgmode.org/">Org-mode</a> + <a href="https://github.com/renard/o-blog">o-blog v2</a>
+</p>
+
+	      <!-- /about -->
+	    </nav>
+	    <nav id="links" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>Links</h2>
+	      <!-- Navigation Footer -->
+	      <ul class="org-ul">
+<li><a href="../../../../index.html"><i class="glyphicon glyphicon-home icon-white"></i> Home</a>
+</li>
+
+<li><a href="../../../../tips/2012/08/adding-an-image-into-a-post/index.html"><i class="glyphicon glyphicon-file icon-white"></i> Tips</a>
+</li>
+
+<li><a href="../../../../tags.html"><i class="glyphicon glyphicon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../../archives.html"><i class="glyphicon glyphicon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../../testimonials.html"><i class="glyphicon glyphicon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../../roadmap.html"><i class="glyphicon glyphicon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../../index.xml"><i class="glyphicon glyphicon-rss icon-white"></i> RSS</a>
+</li>
+</ul>
+
+	      <!-- Navigation Footer -->
+	    </nav>
+	    <nav id="archives" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="../../../../archives.html">Archives</a></h2>
+	      <div>
+<h6><a href="../../../../blog/index.html">BLOG</a></h6>
+<div class="ob-articles" data-source="../../../../articles.js" data-path-to-root="../../../.." data-category="BLOG"></div>
+</div><div>
+<h6><a href="../../../../tips/index.html">Tips</a></h6>
+<div class="ob-articles" data-source="../../../../articles.js" data-path-to-root="../../../.." data-category="Tips"></div>
+</div>
+	    </nav>
+	    <nav class="tags col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="../../../../tags/index.html">Tags</a></h2>
+	      <span class="ob-tagcloud" data-source="../../../../tags.js" data-path-to-root="../../../.."></span>
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <!-- copyright -->
+	  <p>
+Copyright © 2008-2015 <a href="mailto:rbarzic@gmail.com">Ronan BARZIC</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+
+<p>
+Some contents of this website is still coming from the original o-blog website.
+Copyright © 2008-2012 <a href="mailto:seb%2520%E2%9D%A8%C9%91%C6%A6%C9%B5%CF%90%C9%91%CA%82%C9%9B%E2%9D%A9%2520chezwam%2520%E2%9D%A8%C6%A4%C9%B5%C9%A9%C9%B2%CA%88%E2%9D%A9%2520org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	  <p>
+	    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F01%2Fcreating-a-blog%2Findex.html" data-toggle="tooltip" data-placement="top" title="HTML 5 valid"><i class="fa fa-html5"></i></a>
+	    <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F01%2Fcreating-a-blog%2Findex.html" data-toggle="tooltip" data-placement="top" title="CSS 3 valid"><i class="fa fa-css3"></i></a>
+	    <a href="https://www.google.com/webmasters/tools/mobile-friendly/?url=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F01%2Fcreating-a-blog%2Findex.html" data-toggle="tooltip" data-placement="top" title="Mobile friendly"><i class="fa fa-mobile"></i></a>
+	    <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F01%2Fcreating-a-blog%2Findex.html" data-toggle="tooltip" data-placement="top" title="PageSpeed Insights"><i class="fa fa-flag-checkered"></i></a>
+	  </p>
+	</div>
+      </div>
+</body>
+</html>
+

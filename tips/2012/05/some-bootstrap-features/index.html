@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Some Bootstrap features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog v2.0"/>
+    <link rel="icon" type="image/png" href="../../../../style/img/favicon.png" />
+    <script src="../../../../style/js/sidjs.min.js" async></script>
+    <script>
+      Lisp error in nil: (file-error Opening input file no such file or directory /home/ronan/perso/github/o-blog/templates/style/js/runif.min.js)
+      Lisp error in nil: (file-error Opening input file no such file or directory /home/ronan/perso/github/o-blog/templates/style/js/o-blog-init.min.js)
+    </script>
+  </head>
+  <body>
+    <div id="spinner" style="width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999998;background-color:rgba(0,0,0,0.5);">
+      <div id="ob-spinner" style="width:100px;height:100px;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999999;background-color:rgba(127,127,127,0.5);"></div>
+    </div>
+    <div id="page" class="container">
+
+  <div class="article">
+  <header class="article-header">
+    <div class="page-header">
+      <div>
+	<div class="time">
+	  <time datetime="2012-05-03"></time>
+	  <div>
+	    <span class="day">03</span>
+	    <span class="month"><a href="../../../../tips/2012/05/index.html">mai</a>
+	    </span>
+	    <span class="year"><a href="../../../../tips/2012/index.html">2012</a></span>
+	  </div>
+	</div>
+	
+	<h1>Some Bootstrap features</h1>
+      </div>
+      <div>
+	<nav>
+	  <ul class="pager">
+	    <li class="previous"><a href="../../../../tips/2012/02/using-bootstrap-grid/index.html"><i class="fa fa-chevron-circle-left"></i>&nbsp;Using Bootstrap grid</a></li><li class="next" style="text-align: right;"><a href="../../../../tips/2012/05/add-a-custom-font/index.html">Add a custom font&nbsp;<i class="fa fa-chevron-circle-right"></i></a></li>
+	  </ul>
+	</nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+<div id="outline-container-sec-1" class="outline-1">
+<h1 id="sec-1">Hero-unit</h1>
+<div class="outline-text-1" id="text-1">
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-org">#+begin_o_blog_hero_unit
+#+HTML: &lt;h1&gt;Heading&lt;/h1&gt;
+
+, tagline
+
+#+BEGIN_HTML
+,    &lt;a class="btn btn-primary btn-large"&gt;
+,      Learn more
+    &lt;/a&gt;
+#+END_HTML
+#+end_o_blog_hero_unit
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+
+<div class="hero-unit">
+
+
+<h1>Heading</h1>
+
+<p>
+tagline
+</p>
+
+<a class="btn btn-primary btn-large">
+  Learn more
+</a>
+
+</div>
+
+
+
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-1">
+<h1 id="sec-2">Page header</h1>
+<div class="outline-text-1" id="text-2">
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-org">#+begin_o_blog_page_header
+#+HTML: &lt;h1&gt;Page header&lt;/h1&gt;
+,Some text
+#+end_o_blog_page_header
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+
+<div class="page-header">
+
+<h1>Page header</h1>
+<p>
+Some text
+</p>
+
+</div>
+
+
+
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-1">
+<h1 id="sec-3">Using labels</h1>
+<div class="outline-text-1" id="text-3">
+<p>
+Label and annotate text using a <code>label:TYPE</code> link prefix where <code>TYPE</code> is
+one of <code>default</code>, <code>success</code>, <code>warning</code>, <code>important</code>, <code>info</code> or
+<code>reverse</code>. The URL part of the link is used as the label text.
+</p>
+
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-txt">#+BEGIN_HTML
+ &lt;span class="label label-default"&gt;Default&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="label label-success"&gt;Success&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="label label-warning"&gt;Warning&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="label label-important"&gt;Important&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="label label-info"&gt;Info&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;
+#+END_HTML
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+<span class="label label-default">Default</span>
+
+<span class="label label-success">Success</span>
+
+<span class="label label-warning">Warning</span>
+
+<span class="label label-important">Important</span>
+
+<span class="label label-info">Info</span>
+
+<span class="label label-inverse">Inverse</span>
+
+
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-1">
+<h1 id="sec-4">Using badges</h1>
+<div class="outline-text-1" id="text-4">
+<p>
+Indicators and unread counts as for labels. Use the <code>badge:TYPE</code> link
+prefix.
+</p>
+
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-text">#+BEGIN_HTML
+ &lt;span class="badge badge-default"&gt;Default&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="badge badge-important"&gt;Important&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="badge badge-info"&gt;Info&lt;/span&gt;
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;span class="badge badge-inverse"&gt;Inverse&lt;/span&gt;
+#+END_HTML
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+<span class="badge badge-default">Default</span>
+
+<span class="badge badge-success">Success</span>
+
+<span class="badge badge-warning">Warning</span>
+
+<span class="badge badge-important">Important</span>
+
+<span class="badge badge-info">Info</span>
+
+<span class="badge badge-inverse">Inverse</span>
+
+
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-1">
+<h1 id="sec-5">Using progress bars</h1>
+<div class="outline-text-1" id="text-5">
+<p>
+For loading, redirecting, or action status. Use a <code>progress:TYPE</code> link
+where <code>TYPE</code> is one of <code>info</code>, <code>success</code>, <code>warning</code> or
+<code>danger</code>. Additional classes (<code>striped</code> or <code>active</code>) can be added using comma.
+The URL is the progress percent.
+</p>
+
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-text">#+BEGIN_HTML
+ &lt;div class="progress progress-info "&gt;&lt;div class="bar" style="width: 25%;"&gt;&lt;/div<span style="color: #DC8CC3; background-color: #3F3F3F;">&gt;&lt;/div&gt;</span>
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;div class="progress progress-success progress-striped"&gt;&lt;div class="bar" style=<span style="color: #DC8CC3; background-color: #3F3F3F;">"width: 50%;"&gt;&lt;/div&gt;&lt;/div&gt;</span>
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;div class="progress progress-warning progress-striped active"&gt;&lt;div class="bar"<span style="color: #DC8CC3; background-color: #3F3F3F;"> style="width: 75%;"&gt;&lt;/div&gt;&lt;/div&gt;</span>
+#+END_HTML
+
+#+BEGIN_HTML
+ &lt;div class="progress progress-danger "&gt;&lt;div class="bar" style="width: 100%;"&gt;&lt;/<span style="color: #DC8CC3; background-color: #3F3F3F;">div&gt;&lt;/div&gt;</span>
+#+END_HTML
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+<div class="progress progress-info "><div class="bar" style="width: 25%;"></div></div>
+
+<div class="progress progress-success progress-striped"><div class="bar" style="width: 50%;"></div></div>
+
+<div class="progress progress-warning progress-striped active"><div class="bar" style="width: 75%;"></div></div>
+
+<div class="progress progress-danger "><div class="bar" style="width: 100%;"></div></div>
+
+
+</div></div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-1">
+<h1 id="sec-6">Well</h1>
+<div class="outline-text-1" id="text-6">
+<p>
+Use the well as a simple effect on an element to give it an inset effect.
+</p>
+
+<div class="row "><div class="col-sm-7 "><!-- ("7") -->
+
+
+<div class="org-src-container">
+
+<pre class="src src-text">, #+begin_o_blog_well
+, Look, I'm in a well!
+, #+end_o_blog_well
+</pre>
+</div>
+
+</div><div class="col-sm-4 "><!-- ("4") -->
+
+
+
+<div class="well">
+
+<p>
+Look, I'm in a well!
+</p>
+
+</div>
+
+
+
+</div></div>
+</div>
+</div>
+
+  </div>
+  
+  <footer class="article-footer">
+    <!-- Posted on <time datetime="2012-05-03T21:40:00Z"> torsdag mai, 03 2012 at 21:40:00</time>. -->
+    <nav class="tag-cloud">
+      <i class="fa fa-tags"></i>
+      <ul>
+	<li class="label label-default small"><a href="../../../../tags/usage.html">usage</a></li><li class="label label-default small"><a href="../../../../tags/bootstrap.html">Bootstrap</a></li>
+      </ul>
+    </nav>
+
+  </footer>
+  <div class="ob-share">
+  <div class="title">If you like this article you may want to share it</div>
+  <div class="social-container">
+    
+    
+    
+  </div>
+</div>
+
+
+  </div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'renard-o-blog';
+  ob_js_to_load.push(disqus_shortname + '.disqus.com/embed.js');
+</script>
+
+        </div>
+    <div class="ob-navbar-container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ob-navbar">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="../../../../index.html">RB's blog</a>
+      </div>
+      <div class="collapse navbar-collapse ob-navbar">
+	<ul class="org-ul">
+<li><a href="../../../../features.html"><i class="glyphicon glyphicon-cog icon-white"></i> Features</a>
+</li>
+
+<li><a href="#"><i class="glyphicon glyphicon-book icon-white"></i> Documentation</a>
+<ul class="org-ul">
+<li><a href="../../../../templates.html">Templates</a>
+</li>
+<li><a href="../../../../structures.html">Structures</a>
+</li>
+<li><a href="../../../../functions.html">Functions</a>
+</li>
+<li></li>
+<li><a href="../../../../faq.html">FAQ</a>
+</li>
+<li></li>
+<li><a href="../../../../bug-report.html">Bug report</a>
+</li>
+</ul>
+</li>
+
+<li><a href="#"><i class="glyphicon glyphicon-file icon-white"></i> Tips</a>
+<ul class="org-ul">
+<li><a href="../../../../tips/2012/08/adding-an-image-into-a-post/index.html">Adding an image into a post</a>
+</li>
+<li><a href="../../../../tips/2012/05/create-static-pages/index.html">Create static pages</a>
+</li>
+<li><a href="../../../../tips/2012/05/add-a-custom-font/index.html">Add a custom font</a>
+</li>
+<li><a href="../../../../tips/2012/05/some-bootstrap-features/index.html">Some Bootstrap features</a>
+</li>
+<li><a href="../../../../tips/2012/02/using-bootstrap-grid/index.html">Using Bootstrap grid</a>
+</li>
+</ul>
+</li>
+
+<li><a href="../../../../tags.html"><i class="glyphicon glyphicon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../../archives.html"><i class="glyphicon glyphicon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../../testimonials.html"><i class="glyphicon glyphicon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../../index.xml"><i class="glyphicon glyphicon-rss icon-white"></i> RSS</a>
+</li>
+
+<li><a href="../../../../changelog.html"><i class="glyphicon glyphicon-pencil icon-white"></i> Changelog</a>
+</li>
+
+<li><a href="../../../../roadmap.html"><i class="glyphicon glyphicon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../../debug.html">(debug)</a>
+</li>
+</ul>
+
+      </div>
+    </nav>
+
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="../../../../index.html">Home</a> <span class="divider"></span></li>
+  <li><a href="../../../../tips/index.html">Tips</a> <span class="divider"></span></li><li><a href="../../../../tips/2012/index.html">2012</a> <span class="divider"></span></li><li><a href="../../../../tips/2012/05/index.html">05</a> <span class="divider"></span></li><li>Some Bootstrap features</li>
+  </ul>
+
+      </div>
+    </div>
+    </div>
+
+<div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>About</h2>
+	      <!-- about -->
+	      <p>
+This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a href="http://orgmode.org/">Org-mode</a> + <a href="https://github.com/renard/o-blog">o-blog v2</a>
+</p>
+
+	      <!-- /about -->
+	    </nav>
+	    <nav id="links" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>Links</h2>
+	      <!-- Navigation Footer -->
+	      <ul class="org-ul">
+<li><a href="../../../../index.html"><i class="glyphicon glyphicon-home icon-white"></i> Home</a>
+</li>
+
+<li><a href="../../../../tips/2012/08/adding-an-image-into-a-post/index.html"><i class="glyphicon glyphicon-file icon-white"></i> Tips</a>
+</li>
+
+<li><a href="../../../../tags.html"><i class="glyphicon glyphicon-tags icon-white"></i> Tags</a>
+</li>
+
+<li><a href="../../../../archives.html"><i class="glyphicon glyphicon-list icon-white"></i> Archives</a>
+</li>
+
+<li><a href="../../../../testimonials.html"><i class="glyphicon glyphicon-comments-alt icon-white"></i> Testimonials</a>
+</li>
+
+<li><a href="../../../../roadmap.html"><i class="glyphicon glyphicon-tasks icon-white"></i> Roadmap</a>
+</li>
+
+<li><a href="../../../../index.xml"><i class="glyphicon glyphicon-rss icon-white"></i> RSS</a>
+</li>
+</ul>
+
+	      <!-- Navigation Footer -->
+	    </nav>
+	    <nav id="archives" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="../../../../archives.html">Archives</a></h2>
+	      <div>
+<h6><a href="../../../../blog/index.html">BLOG</a></h6>
+<div class="ob-articles" data-source="../../../../articles.js" data-path-to-root="../../../.." data-category="BLOG"></div>
+</div><div>
+<h6><a href="../../../../tips/index.html">Tips</a></h6>
+<div class="ob-articles" data-source="../../../../articles.js" data-path-to-root="../../../.." data-category="Tips"></div>
+</div>
+	    </nav>
+	    <nav class="tags col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="../../../../tags/index.html">Tags</a></h2>
+	      <span class="ob-tagcloud" data-source="../../../../tags.js" data-path-to-root="../../../.."></span>
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <!-- copyright -->
+	  <p>
+Copyright © 2008-2015 <a href="mailto:rbarzic@gmail.com">Ronan BARZIC</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+
+<p>
+Some contents of this website is still coming from the original o-blog website.
+Copyright © 2008-2012 <a href="mailto:seb%2520%E2%9D%A8%C9%91%C6%A6%C9%B5%CF%90%C9%91%CA%82%C9%9B%E2%9D%A9%2520chezwam%2520%E2%9D%A8%C6%A4%C9%B5%C9%A9%C9%B2%CA%88%E2%9D%A9%2520org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	  <p>
+	    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F05%2Fsome-bootstrap-features%2Findex.html" data-toggle="tooltip" data-placement="top" title="HTML 5 valid"><i class="fa fa-html5"></i></a>
+	    <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F05%2Fsome-bootstrap-features%2Findex.html" data-toggle="tooltip" data-placement="top" title="CSS 3 valid"><i class="fa fa-css3"></i></a>
+	    <a href="https://www.google.com/webmasters/tools/mobile-friendly/?url=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F05%2Fsome-bootstrap-features%2Findex.html" data-toggle="tooltip" data-placement="top" title="Mobile friendly"><i class="fa fa-mobile"></i></a>
+	    <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Frenard.github.com%2Fo-blog%2Ftips%2F2012%2F05%2Fsome-bootstrap-features%2Findex.html" data-toggle="tooltip" data-placement="top" title="PageSpeed Insights"><i class="fa fa-flag-checkered"></i></a>
+	  </p>
+	</div>
+      </div>
+</body>
+</html>
+
