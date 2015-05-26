@@ -3,62 +3,7 @@
   <title>RB's blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2015-05-22T16:42:18Z</updated>
+  <updated>2015-05-23T13:10:13Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
-  <entry><title type="html">Using Flymake with Emacs Arduino mode</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2015/05/22_using-flymake-with-emacs-arduino-mode.html"/><updated>2015-05-22T13:47:00Z</updated><published>2015-05-22T13:47:00Z</published><id>blog/2015/05/22_using-flymake-with-emacs-arduino-mode.html</id><content type="html">&lt;p&gt;
-I've added some &lt;a href="http://www.emacswiki.org/emacs/FlyMake"&gt;Flymake&lt;/a&gt; support to
-&lt;a href="https://github.com/sudar/Arduino-Makefile"&gt;Arduino-Makefile&lt;/a&gt;. It
-allows on the fly syntax checking using flymake by calling gcc with
-arduino-compatible  options in the background.
-&lt;/p&gt;
-
-&lt;p&gt;
-The Makefile for the project must be edited to add a check-syntax target :
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre class="src src-Makefile"&gt;BOARD_TAG    = uno
-ARDUINO_LIBS =
-
-include ../../Arduino.mk
-
-check-syntax:
-        $(CXX_NAME) -c -include Arduino.h   -x c++ $(CXXFLAGS)   $(CPPFLAGS)  -fsyntax-only $(CHK_SOURCES)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-See &lt;a href="https://github.com/rbarzic/Arduino-Makefile/blob/master/examples/Blink/Makefile"&gt;https://github.com/rbarzic/Arduino-Makefile/blob/master/examples/Blink/Makefile&lt;/a&gt; for a complete example.
-&lt;/p&gt;
-
-&lt;p&gt;
-Emacs flymake mode must be configured to accept Arduino ino files : 
-&lt;/p&gt;
-
-&lt;p&gt;
-M-x customize-option RET
-flymake-allowed-file-name-masks RET (using auto completion !)
-&lt;/p&gt;
-
-&lt;p&gt;
-Add the line : 
-&lt;/p&gt;
-
-&lt;p&gt;
-("\\.ino\\'" flymake-simple-make-init)
-&lt;/p&gt;
-
-
-&lt;p&gt;
-Then click on "Apply and Save" button
-&lt;/p&gt;
-
-&lt;p&gt;
-Then when editing an ino file, turn-on flymake-mode with M-x flymake-mode
-&lt;/p&gt;
-</content></entry><entry><title type="html">A test post</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2014/06/04_a-test-post.html"/><updated>2014-06-04T20:32:00Z</updated><published>2014-06-04T20:32:00Z</published><id>blog/2014/06/04_a-test-post.html</id><content type="html">&lt;p&gt;
-This is a test post - to check o-blog bevahiour
-&lt;/p&gt;
-</content></entry>
+  <entry><title type="html">Carbon is conductive</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2015/05/23_carbon-is-conductive.html"/><updated>2015-05-23T12:48:00Z</updated><published>2015-05-23T12:48:00Z</published><id>blog/2015/05/23_carbon-is-conductive.html</id><category scheme="/tags/quadcopter.html" term="quadcopter" label="quadcopter"/>Lisp error in nil: (void-function htmlize-protect-string)
 </feed>

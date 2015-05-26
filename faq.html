@@ -136,7 +136,7 @@ solution using Python, simply run:
 
 <div class="org-src-container">
 
-<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">cd</span> /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
+<pre class="src src-sh">cd /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
 </pre>
 </div>
 
@@ -150,9 +150,9 @@ Or within Emacs you can run the <a href="https://github.com/jrhbailey/emacs-http
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #DCDCCC;">(</span><span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">httpd</span><span style="color: #DCDCCC;">)</span>
-<span style="color: #DCDCCC;">(</span>setq httpd-root <span style="color: #CC9393;">"/path/to/your/site"</span><span style="color: #DCDCCC;">)</span>
-<span style="color: #DCDCCC;">(</span>httpd-start<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">(require 'httpd)
+(setq httpd-root "/path/to/your/site")
+(httpd-start)
 </pre>
 </div>
 
@@ -193,7 +193,7 @@ So here is the magic! Once your site is generated, you can run the following com
 
 <div class="org-src-container">
 
-<pre class="src src-sh">htmlcompressor --compress-js --compress-css --recursive --mask <span style="color: #CC9393;">'*.js;*.html;*.xm</span><span style="color: #DC8CC3; background-color: #3F3F3F;">l;*.css;*.less' -o /path/to/out/ /path/to/out</span>
+<pre class="src src-sh">htmlcompressor --compress-js --compress-css --recursive --mask '*.js;*.html;*.xml;*.css;*.less' -o /path/to/out/ /path/to/out
 </pre>
 </div>
 </div>

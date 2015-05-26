@@ -33,8 +33,6 @@
 <li><a href="./functions.html">Functions</a>
 </li>
 <li></li>
-<li><a href="./faq.html">FAQ</a>
-</li>
 <li></li>
 <li><a href="./bug-report.html">Bug report</a>
 </li>
@@ -61,19 +59,19 @@
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 
 <li><a href="./changelog.html"><i class="icon-pencil icon-white"></i> Changelog</a>
 </li>
+</ul>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./debug.html">(debug)</a>
 </li>
 </ul>
@@ -145,7 +143,7 @@ Getting the last 10 posts:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #DCDCCC;">(</span>ob:get-posts nil 10<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">(ob:get-posts nil 10)
 </pre>
 </div>
 
@@ -156,10 +154,10 @@ Getting posts from January 2012:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #DCDCCC;">(</span>ob:get-posts
-   <span style="color: #BFEBBF;">(</span><span style="color: #F0DFAF; font-weight: bold;">lambda</span> <span style="color: #D0BF8F;">(</span>x<span style="color: #D0BF8F;">)</span>
-      <span style="color: #D0BF8F;">(</span>and <span style="color: #93E0E3;">(</span>= 2012 <span style="color: #9FC59F;">(</span>ob:post-year x<span style="color: #9FC59F;">)</span><span style="color: #93E0E3;">)</span>
-           <span style="color: #93E0E3;">(</span>= 1 <span style="color: #9FC59F;">(</span>ob:post-month x<span style="color: #9FC59F;">)</span><span style="color: #93E0E3;">)</span><span style="color: #D0BF8F;">)</span><span style="color: #BFEBBF;">)</span><span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">(ob:get-posts
+   (lambda (x)
+      (and (= 2012 (ob:post-year x))
+           (= 1 (ob:post-month x)))))
 </pre>
 </div>
 
@@ -169,7 +167,7 @@ Getting all categories:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #DCDCCC;">(</span>ob:get-posts nil nil nil 'category<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">(ob:get-posts nil nil nil 'category)
 </pre>
 </div>
 </div>
@@ -183,18 +181,18 @@ For archive navigation:
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #93E0E3;">nav</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"archives"</span>&gt;
-  &lt;<span style="color: #93E0E3;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Archives</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;
-  &lt;<span style="color: #93E0E3;">ul</span>&gt;
-    &lt;<span style="color: #93E0E3;">lisp</span>&gt;
+<pre class="src src-html">&lt;nav id="archives"&gt;
+  &lt;h1&gt;Archives&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;lisp&gt;
       (loop for p in (ob:get-posts nil 10)
-            do (insert (format <span style="color: #CC9393;">"&lt;li&gt;&lt;a href=\"</span><span style="color: #DFAF8F;">%s</span>/<span style="color: #DFAF8F;">%s</span>\<span style="color: #CC9393;">"&gt;%s&lt;/a&gt;&lt;/li&gt; "</span>
+            do (insert (format "&lt;li&gt;&lt;a href=\"%s/%s\"&gt;%s&lt;/a&gt;&lt;/li&gt; "
                                (ob:path-to-root)
                                (ob:post-htmlfile p)
                                (ob:post-title p))))
-    &lt;/<span style="color: #93E0E3;">lisp</span>&gt;
-  &lt;/<span style="color: #93E0E3;">ul</span>&gt;
-&lt;/<span style="color: #93E0E3;">nav</span>&gt;
+    &lt;/lisp&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 </pre>
 </div>
 </div>
@@ -216,29 +214,29 @@ Posts navigation, setting up links to previous and next post:
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #93E0E3;">nav</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"articles-nav"</span>&gt;
-  &lt;<span style="color: #93E0E3;">ul</span>&gt;
-    &lt;<span style="color: #93E0E3;">lisp</span>&gt;
+<pre class="src src-html">&lt;nav class="articles-nav"&gt;
+  &lt;ul&gt;
+    &lt;lisp&gt;
       (progn
         ;; Get previous post
         (let ((ppost (ob:get-post-by-id (1+ (ob:post-id POST)))))
           (if ppost
-              (insert (format <span style="color: #CC9393;">"&lt;li class=\"</span>prev\<span style="color: #CC9393;">"&gt;&lt;a href=\"</span><span style="color: #DFAF8F;">%s</span>/<span style="color: #DFAF8F;">%s</span>\<span style="color: #CC9393;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+              (insert (format "&lt;li class=\"prev\"&gt;&lt;a href=\"%s/%s\"&gt;%s&lt;/a&gt;&lt;/li&gt;"
                               (ob:path-to-root)
                               (ob:post-htmlfile ppost)
                               (ob:post-title ppost)))
-            (insert <span style="color: #CC9393;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>)))
+            (insert "&lt;li&gt;&amp;nbsp;&lt;/li&gt;")))
         ;; Get next post
         (let ((npost (ob:get-post-by-id (1- (ob:post-id POST)))))
           (if npost
-              (insert (format <span style="color: #CC9393;">"&lt;li class=\"</span>next\<span style="color: #CC9393;">"&gt;&lt;a href=\"</span><span style="color: #DFAF8F;">%s</span>/<span style="color: #DFAF8F;">%s</span>\<span style="color: #CC9393;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+              (insert (format "&lt;li class=\"next\"&gt;&lt;a href=\"%s/%s\"&gt;%s&lt;/a&gt;&lt;/li&gt;"
                               (ob:path-to-root)
                               (ob:post-htmlfile npost)
                               (ob:post-title npost)))
-            (insert <span style="color: #CC9393;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>))))
-    &lt;/<span style="color: #93E0E3;">lisp</span>&gt;
-  &lt;/<span style="color: #93E0E3;">ul</span>&gt;
-&lt;/<span style="color: #93E0E3;">nav</span>&gt;
+            (insert "&lt;li&gt;&amp;nbsp;&lt;/li&gt;"))))
+    &lt;/lisp&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 </pre>
 </div>
 </div>
@@ -260,10 +258,10 @@ Insert the <i>About</i> section in page footer:
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #93E0E3;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">About</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;
-&lt;<span style="color: #93E0E3;">address</span>&gt;
-  &lt;<span style="color: #93E0E3;">lisp</span>&gt;(ob:post-content-html (ob:get-snippet <span style="color: #CC9393;">"About"</span>))&lt;/<span style="color: #93E0E3;">lisp</span>&gt;
-&lt;/<span style="color: #93E0E3;">address</span>&gt;
+<pre class="src src-html">&lt;h1&gt;About&lt;/h1&gt;
+&lt;address&gt;
+  &lt;lisp&gt;(ob:post-content-html (ob:get-snippet "About"))&lt;/lisp&gt;
+&lt;/address&gt;
 </pre>
 </div>
 </div>
@@ -289,7 +287,7 @@ Get the last updated header for RSS export:
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #93E0E3;">updated</span>&gt;&lt;<span style="color: #93E0E3;">lisp</span>&gt;(ob:format-date (ob:get-header <span style="color: #CC9393;">"DATE"</span>))&lt;/<span style="color: #93E0E3;">lisp</span>&gt;&lt;/<span style="color: #93E0E3;">updated</span>&gt;
+<pre class="src src-html">&lt;updated&gt;&lt;lisp&gt;(ob:format-date (ob:get-header "DATE"))&lt;/lisp&gt;&lt;/updated&gt;
 </pre>
 </div>
 </div>
@@ -311,7 +309,7 @@ Insert html header:
 
 <div class="org-src-container">
 
-<pre class="src src-html">&lt;<span style="color: #93E0E3;">lisp</span>&gt;(ob:insert-template <span style="color: #CC9393;">"page_header.html"</span>)&lt;/<span style="color: #93E0E3;">lisp</span>&gt;
+<pre class="src src-html">&lt;lisp&gt;(ob:insert-template "page_header.html")&lt;/lisp&gt;
 </pre>
 </div>
 </div>
@@ -343,9 +341,9 @@ Add a human-readable timestamp for a post:
 
 <div class="org-src-container">
 
-<pre class="src src-html">Posted on &lt;<span style="color: #93E0E3;">time</span> <span style="color: #DFAF8F;">datetime</span>=<span style="color: #CC9393;">"&lt;lisp&gt; (ob:format-date (ob:post-timestamp POST)) &lt;/lis</span><span style="color: #DC8CC3; background-color: #3F3F3F;">p&gt;"&gt;</span>
-  &lt;<span style="color: #93E0E3;">lisp</span>&gt; (ob:format-date (ob:post-timestamp POST) <span style="color: #CC9393;">"%A %B, %d %Y at %H:%M:%S"</span>) &lt;/<span style="color: #DC8CC3; background-color: #3F3F3F;">lisp&gt;</span>
-&lt;/<span style="color: #93E0E3;">time</span>&gt;.
+<pre class="src src-html">Posted on &lt;time datetime="&lt;lisp&gt; (ob:format-date (ob:post-timestamp POST)) &lt;/lisp&gt;"&gt;
+  &lt;lisp&gt; (ob:format-date (ob:post-timestamp POST) "%A %B, %d %Y at %H:%M:%S") &lt;/lisp&gt;
+&lt;/time&gt;.
 </pre>
 </div>
 </div>
@@ -382,13 +380,10 @@ This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a hr
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
-
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 </ul>

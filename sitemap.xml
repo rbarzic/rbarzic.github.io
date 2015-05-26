@@ -2,98 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>http://renard.github.com/o-blog/</loc>
-    <lastmod>2015-05-22T13:47:00Z</lastmod>
+    <lastmod>2015-05-23T12:48:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://renard.github.com/o-blog/index.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
+    <lastmod>2015-05-23T13:10:13Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/tags.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
+    <lastmod>2015-05-23T13:10:13Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/changelog.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/debug.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/features.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/templates.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/structures.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/functions.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/bug-report.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/testimonials.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/roadmap.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/faq.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>http://renard.github.com/o-blog/who-am-i.html</loc>
-    <lastmod>2015-05-22T16:42:18Z</lastmod>
+    <lastmod>2015-05-23T13:10:13Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -101,6 +31,12 @@
 
 
   <url>
+    <loc>http://renard.github.com/o-blog/blog/2015/05/23_carbon-is-conductive.html</loc>
+    <lastmod>2015-05-23T12:48:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
     <loc>http://renard.github.com/o-blog/blog/2015/05/22_using-flymake-with-emacs-arduino-mode.html</loc>
     <lastmod>2015-05-22T13:47:00Z</lastmod>
     <changefreq>weekly</changefreq>

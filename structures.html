@@ -33,8 +33,6 @@
 <li><a href="./functions.html">Functions</a>
 </li>
 <li></li>
-<li><a href="./faq.html">FAQ</a>
-</li>
 <li></li>
 <li><a href="./bug-report.html">Bug report</a>
 </li>
@@ -61,19 +59,19 @@
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 
 <li><a href="./changelog.html"><i class="icon-pencil icon-white"></i> Changelog</a>
 </li>
+</ul>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./debug.html">(debug)</a>
 </li>
 </ul>
@@ -168,8 +166,8 @@ Example:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">get the title of the current blog defined in variable BLOG.</span>
-<span style="color: #DCDCCC;">(</span>ob:blog-title BLOG<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">;; get the title of the current blog defined in variable BLOG.
+(ob:blog-title BLOG)
 </pre>
 </div>
 </div>
@@ -221,8 +219,8 @@ Example:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Get the HTML content of the post defined in variable POST.</span>
-<span style="color: #DCDCCC;">(</span>ob:post-content-html POST<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">;; Get the HTML content of the post defined in variable POST.
+(ob:post-content-html POST)
 </pre>
 </div>
 </div>
@@ -251,8 +249,8 @@ Example:
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">get the name of the tag defined in variable TAG.</span>
-<span style="color: #DCDCCC;">(</span>ob:tags-name TAG<span style="color: #DCDCCC;">)</span>
+<pre class="src src-emacs-lisp">;; get the name of the tag defined in variable TAG.
+(ob:tags-name TAG)
 </pre>
 </div>
 </div>
@@ -332,13 +330,10 @@ This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a hr
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
-
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 </ul>

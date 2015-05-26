@@ -33,8 +33,6 @@
 <li><a href="./functions.html">Functions</a>
 </li>
 <li></li>
-<li><a href="./faq.html">FAQ</a>
-</li>
 <li></li>
 <li><a href="./bug-report.html">Bug report</a>
 </li>
@@ -61,19 +59,19 @@
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 
 <li><a href="./changelog.html"><i class="icon-pencil icon-white"></i> Changelog</a>
 </li>
+</ul>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
 
+<ul class="org-ul">
 <li><a href="./debug.html">(debug)</a>
 </li>
 </ul>
@@ -113,7 +111,7 @@ You can bootstrap a simple clean environment:
 
 <pre class="src src-sh">rm -rf ~/dev/.emacs.d
 mkdir -p ~/dev/.emacs.d
-<span style="color: #DCDCCC; font-weight: bold;">cd</span> ~/dev/.emacs.d
+cd ~/dev/.emacs.d
 git clone git://github.com/renard/o-blog.git
 git clone git://orgmode.org/org-mode.git
 </pre>
@@ -126,12 +124,12 @@ Then launch <code>emacs</code>:
 
 <div class="org-src-container">
 
-<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">cd</span> ~/dev
+<pre class="src src-sh">cd ~/dev
 rm -rf .emacs.d/o-blog/example/out
-emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval <span style="color: #CC9393;">\</span>
-    <span style="color: #CC9393;">'(progn (setq browse-url-generic-program "x-www-browser"</span>
-<span style="color: #CC9393;">      browse-url-browser-function (quote browse-url-generic))</span>
-<span style="color: #CC9393;">      (ob-build-sample))'</span>
+emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \
+    '(progn (setq browse-url-generic-program "x-www-browser"
+      browse-url-browser-function (quote browse-url-generic))
+      (ob-build-sample))'
 </pre>
 </div>
 
@@ -185,13 +183,10 @@ This blog is built using  <a href="http://www.gnu.org/s/emacs">Emacs</a> + <a hr
 
 <li><a href="./archives.html"><i class="icon-list icon-white"></i> Archives</a>
 </li>
+</ul>
 
-<li><a href="./testimonials.html"><i class="icon-comments-alt icon-white"></i> Testimonials</a>
-</li>
 
-<li><a href="./roadmap.html"><i class="icon-tasks icon-white"></i> Roadmap</a>
-</li>
-
+<ul class="org-ul">
 <li><a href="./index.xml"><i class="icon-rss icon-white"></i> RSS</a>
 </li>
 </ul>
